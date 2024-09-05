@@ -57,6 +57,60 @@ header a:hover {
     transform: scale(1.1);
 }
 
+/* Navbar */
+#navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    z-index: 1000;
+}
+
+#navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+#navbar ul li a {
+    color: #00f2ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+#navbar ul li a:hover {
+    color: #ff6b6b;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+.theme-toggle button {
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.theme-toggle button:hover {
+    background-color: #00f2ff;
+    color: #000;
+}
+
 /* Section Styling */
 section {
     padding: 60px 20px;
@@ -74,6 +128,49 @@ section h2 {
     font-size: 2.5em;
     border-bottom: 3px solid #00f2ff;
     margin-bottom: 20px;
+}
+
+/* Experience Cards */
+.experience-grid {
+    display: flex;
+    gap: 20px;
+}
+
+.experience-card {
+    width: 45%;
+    perspective: 1000px;
+}
+
+.experience-card .card-front,
+.experience-card .card-back {
+    width: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.8s;
+}
+
+.experience-card .card-front {
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.experience-card .card-back {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    transform: rotateY(180deg);
+}
+
+.experience-card:hover .card-front {
+    transform: rotateY(180deg);
+}
+
+.experience-card:hover .card-back {
+    transform: rotateY(360deg);
 }
 
 /* Skill Progress Bar */
@@ -128,6 +225,7 @@ footer {
     }
 }
 
+/* Fade-in sections on scroll */
 .fade-in {
     opacity: 1;
     transform: translateY(0);
