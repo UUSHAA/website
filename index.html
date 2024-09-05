@@ -16,6 +16,20 @@
         <p><a href="https://linkedin.com/in/muhammad-usman-shehryar-5479181a2" class="btn" target="_blank">LinkedIn Profile</a></p>
     </header>
 
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle">
+        <button id="toggle-theme">Switch to Light Mode</button>
+    </div>
+
+    <nav id="navbar">
+        <ul>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
     <section id="profile">
         <h2>Profile</h2>
         <p>
@@ -27,23 +41,34 @@
 
     <section id="experience">
         <h2>Experience</h2>
-        <div class="job">
-            <h3>Frontend Web Developer - Fiverr</h3>
-            <p>Jun 2020 - Sep 2023</p>
-            <ul>
-                <li>Worked on freelance web development projects while studying Computer Science.</li>
-                <li>Managed projects, communicated with clients, and delivered customized websites.</li>
-                <li>Developed responsive layouts, integrated interactive features, and optimized site performance.</li>
-            </ul>
-        </div>
-        <div class="job">
-            <h3>Freelance Graphic Designer</h3>
-            <p>Jan 2020 - Jun 2022</p>
-            <ul>
-                <li>Designed websites and graphics for global clients through online platforms.</li>
-                <li>Managed multiple projects, communicated effectively, and delivered on time.</li>
-                <li>Used various design software to bring client visions to life.</li>
-            </ul>
+        <div class="experience-grid">
+            <div class="experience-card">
+                <div class="card-front">
+                    <h3>Frontend Web Developer - Fiverr</h3>
+                    <p>Jun 2020 - Sep 2023</p>
+                </div>
+                <div class="card-back">
+                    <ul>
+                        <li>Worked on freelance web development projects while studying Computer Science.</li>
+                        <li>Managed projects, communicated with clients, and delivered customized websites.</li>
+                        <li>Developed responsive layouts, integrated interactive features, and optimized site performance.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-card">
+                <div class="card-front">
+                    <h3>Freelance Graphic Designer</h3>
+                    <p>Jan 2020 - Jun 2022</p>
+                </div>
+                <div class="card-back">
+                    <ul>
+                        <li>Designed websites and graphics for global clients through online platforms.</li>
+                        <li>Managed multiple projects, communicated effectively, and delivered on time.</li>
+                        <li>Used various design software to bring client visions to life.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -69,7 +94,7 @@
         </div>
     </section>
 
-    <footer>
+    <footer id="contact">
         <p>Contact me at: <a href="mailto:usman.sa357@gmail.com">usman.sa357@gmail.com</a> | Phone: +44 7851 328425</p>
         <p>&copy; 2024 Muhammad Usman Shehryar</p>
     </footer>
