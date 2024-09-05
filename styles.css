@@ -1,113 +1,107 @@
+/* Global Styles */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(45deg, #ffb703, #023047);
+    background-color: #1a1a1a;
+    color: #ccc;
     scroll-behavior: smooth;
-    color: #333;
+    overflow-x: hidden;
 }
 
+/* Header Section */
 header {
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
-    color: #fff;
-    padding: 50px;
+    background: radial-gradient(circle, #333, #000);
+    padding: 60px;
     text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-header h1, header p, a.btn {
-    animation: fadeInUp 2s ease-in-out;
-}
-
-a {
     color: #fff;
-    text-decoration: none;
+    overflow: hidden;
+    position: relative;
 }
 
-a.btn {
-    background-color: #ffb703;
-    color: #000;
-    padding: 10px 20px;
-    font-weight: bold;
-    border-radius: 30px;
-    transition: transform 0.5s ease-in-out, background-color 0.3s;
-}
-
-a.btn:hover {
-    background-color: #023047;
-    transform: rotate(360deg);
-}
-
-section {
-    padding: 50px;
-    margin: 30px 0;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+header h1, header p, header a {
+    margin: 0;
+    padding: 10px 0;
     opacity: 0;
+    animation: fadeInUp 2s ease-in-out forwards;
+}
+
+header h1 {
+    font-size: 3em;
+    letter-spacing: 2px;
+}
+
+header a {
+    display: inline-block;
+    background-color: #ff6b6b;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 20px;
+    animation-delay: 0.5s;
+}
+
+header a:hover {
+    background-color: #ff8b8b;
+    transform: scale(1.1);
+}
+
+/* Section Styling */
+section {
+    padding: 60px 20px;
+    background-color: #2a2a2a;
+    margin: 30px 0;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
     transform: translateY(50px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
 }
 
 section h2 {
+    color: #ff6b6b;
     font-size: 2.5em;
-    color: #0072ff;
-    border-bottom: 2px solid #0072ff;
+    border-bottom: 3px solid #ff6b6b;
     margin-bottom: 20px;
-    animation: slideInFromLeft 1.5s ease-in-out;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    background-color: #f4f4f4;
+section ul li {
+    background: #333;
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease;
 }
 
-ul li:hover {
-    background-color: #ffb703;
-    color: #fff;
+section ul li:hover {
+    background-color: #444;
 }
 
+/* Footer */
 footer {
-    background: #023047;
-    color: #fff;
     text-align: center;
-    padding: 20px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    background-color: #000;
+    color: #ff6b6b;
+    position: relative;
+    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.7);
 }
 
+/* Animations */
 @keyframes fadeInUp {
-    from {
+    0% {
         opacity: 0;
         transform: translateY(50px);
     }
-    to {
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-@keyframes slideInFromLeft {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
+/* Fade-in sections on scroll */
 .fade-in {
     opacity: 1;
     transform: translateY(0);
