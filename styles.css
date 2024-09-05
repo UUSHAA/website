@@ -1,112 +1,107 @@
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: linear-gradient(45deg, #ffb703, #023047);
     scroll-behavior: smooth;
+    color: #333;
 }
 
 header {
-    background: linear-gradient(135deg, #0072ff, #00c6ff);
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
     color: #fff;
-    padding: 40px;
+    padding: 50px;
     text-align: center;
-    animation: fadeIn 2s ease-in-out;
+    position: relative;
+    overflow: hidden;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 3em;
-    animation: slideInFromLeft 1.5s ease-in-out;
-}
-
-header p {
-    margin: 10px 0 0;
-    font-size: 1.2em;
-    animation: slideInFromRight 1.5s ease-in-out;
+header h1, header p, a.btn {
+    animation: fadeInUp 2s ease-in-out;
 }
 
 a {
-    color: #0072ff;
+    color: #fff;
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
+a.btn {
+    background-color: #ffb703;
+    color: #000;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: transform 0.5s ease-in-out, background-color 0.3s;
+}
+
+a.btn:hover {
+    background-color: #023047;
+    transform: rotate(360deg);
 }
 
 section {
-    padding: 40px 20px;
-    margin: 20px 0;
+    padding: 50px;
+    margin: 30px 0;
     background: #fff;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.5s ease-in-out;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 section h2 {
-    border-bottom: 2px solid #0072ff;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-.job h3 {
-    margin: 0;
-    font-size: 1.8em;
+    font-size: 2.5em;
     color: #0072ff;
-}
-
-.job p {
-    font-style: italic;
-    margin: 5px 0 15px;
+    border-bottom: 2px solid #0072ff;
+    margin-bottom: 20px;
+    animation: slideInFromLeft 1.5s ease-in-out;
 }
 
 ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin: 10px 0;
+    list-style-type: none;
+    padding: 0;
 }
 
 ul li {
-    margin-bottom: 10px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+ul li:hover {
+    background-color: #ffb703;
+    color: #fff;
 }
 
 footer {
+    background: #023047;
+    color: #fff;
     text-align: center;
     padding: 20px;
-    background: #333;
-    color: #fff;
     position: fixed;
-    bottom: 0;
     width: 100%;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 2s ease-in-out;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes fadeIn {
+@keyframes fadeInUp {
     from {
         opacity: 0;
+        transform: translateY(50px);
     }
     to {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
 @keyframes slideInFromLeft {
     from {
         transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInFromRight {
-    from {
-        transform: translateX(100%);
     }
     to {
         transform: translateX(0);
