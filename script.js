@@ -4,12 +4,4 @@ document.addEventListener('DOMContentLoaded', () => {
     const fadeInOnScroll = () => {
         sections.forEach(section => {
             const rect = section.getBoundingClientRect();
-            if (rect.top < window.innerHeight) {
-                section.classList.add('fade-in');
-            }
-        });
-    };
-
-    fadeInOnScroll();  // Run initially to fade in sections visible on load
-    window.addEventListener('scroll', fadeInOnScroll);
-});
+            if (rect.top < window.innerHeight - 100
