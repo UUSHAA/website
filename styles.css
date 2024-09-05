@@ -79,6 +79,11 @@ section ul li:hover {
     background-color: #444;
 }
 
+/* Add more padding to the last section to prevent overlap with the footer */
+#skills {
+    padding-bottom: 100px;
+}
+
 /* Footer */
 footer {
     text-align: center;
