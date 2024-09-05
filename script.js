@@ -13,6 +13,16 @@ document.addEventListener('DOMContentLoaded', () => {
     fadeInOnScroll();  // Run initially to fade in sections visible on load
     window.addEventListener('scroll', fadeInOnScroll);
 
+    // Theme Toggle
+    const toggleButton = document.getElementById('toggle-theme');
+    let isDarkMode = true;
+
+    toggleButton.addEventListener('click', () => {
+        document.body.classList.toggle('light-theme');
+        isDarkMode = !isDarkMode;
+        toggleButton.textContent = isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    });
+
     // Particles effect
     const canvas = document.getElementById('particles');
     const ctx = canvas.getContext('2d');
@@ -49,26 +59,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function init() {
-        for (let i = 0; i < numberOfParticles; i++) {
-            particlesArray.push(new Particle());
-        }
-    }
-
-    function animateParticles() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        particlesArray.forEach((particle, index) => {
-            particle.update();
-            particle.draw();
-
-            if (particle.size <= 0.2) {
-                particlesArray.splice(index, 1);
-                particlesArray.push(new Particle());
-            }
-        });
-
-        requestAnimationFrame(animateParticles);
-    }
-
-    init();
-    animateParticles();
-});
+        for (let i = 0; i < numberOf
