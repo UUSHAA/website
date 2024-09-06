@@ -1,232 +1,174 @@
-/* Global Styles */
+/* Global Styling */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212;
-    color: #eee;
+    background-color: #1c1c1c;
+    color: #fff;
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
-/* Particle Background */
-#particles {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, #1a1a1a, #000);
-}
-
-/* Header Section */
-header {
-    padding: 80px;
-    text-align: center;
-    color: #fff;
-    position: relative;
-}
-
-header h1, header p, header a {
-    margin: 0;
-    padding: 10px 0;
-    opacity: 0;
-    animation: fadeInUp 2s ease-in-out forwards;
-}
-
-header h1 {
-    font-size: 3.5em;
-    color: #ff6b6b;
-}
-
-header a {
-    display: inline-block;
-    background-color: #00f2ff;
-    padding: 12px 24px;
-    border-radius: 30px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #000;
-    margin-top: 20px;
-    animation-delay: 0.5s;
-}
-
-header a:hover {
-    background-color: #ff6b6b;
-    transform: scale(1.1);
-}
-
-/* Navbar */
-#navbar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 10px;
-    z-index: 1000;
-}
-
-#navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-#navbar ul li {
-    display: inline;
-    margin-right: 15px;
-}
-
-#navbar ul li a {
-    color: #00f2ff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
-}
-
-#navbar ul li a:hover {
-    color: #ff6b6b;
-}
-
-/* Theme Toggle */
-.theme-toggle {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 1000;
-}
-
-.theme-toggle button {
-    background-color: #ff6b6b;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.theme-toggle button:hover {
-    background-color: #00f2ff;
-    color: #000;
-}
-
-/* Section Styling */
-section {
-    padding: 60px 20px;
-    background-color: #1e1e1e;
-    margin: 30px 0;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
-    transform: translateY(50px);
-    opacity: 0;
-    transition: all 0.7s ease-in-out;
-}
-
-section h2 {
-    color: #00f2ff;
-    font-size: 2.5em;
-    border-bottom: 3px solid #00f2ff;
-    margin-bottom: 20px;
-}
-
-/* Experience Cards */
-.experience-grid {
+/* Hero Section */
+#hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #ff6b6b, #f0a500);
     display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.hero-left h1 {
+    font-size: 3.5rem;
+}
+
+.hero-left p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.experience {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.years {
+    font-size: 2.5rem;
+    color: #ff6b6b;
+}
+
+.skills-icons span {
+    background-color: #333;
+    padding: 8px 16px;
+    margin: 5px;
+    border-radius: 20px;
+    color: #fff;
+    display: inline-block;
+}
+
+.hero-right img {
+    width: 350px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Projects Section */
+#projects {
+    padding: 60px;
+    background-color: #101010;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
-.experience-card {
-    width: 45%;
-    perspective: 1000px;
-}
-
-.experience-card .card-front,
-.experience-card .card-back {
-    width: 100%;
-    backface-visibility: hidden;
-    transition: transform 0.8s;
-}
-
-.experience-card .card-front {
-    background-color: #ff6b6b;
-    color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.experience-card .card-back {
-    background-color: #1e1e1e;
-    color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    position: absolute;
-    top: 0;
-    transform: rotateY(180deg);
-}
-
-.experience-card:hover .card-front {
-    transform: rotateY(180deg);
-}
-
-.experience-card:hover .card-back {
-    transform: rotateY(360deg);
-}
-
-/* Skill Progress Bar */
-.skill {
-    margin-bottom: 20px;
-}
-
-.skill h3 {
-    color: #ff6b6b;
-    margin-bottom: 5px;
-}
-
-.progress-bar {
-    background-color: #333;
-    border-radius: 5px;
+.project-card {
+    background-color: #252525;
+    border-radius: 15px;
     overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
 }
 
-.progress {
-    height: 20px;
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    color: #ff6b6b;
+}
+
+/* Skills Section */
+#skills {
+    padding: 60px;
+    background-color: #151515;
+    text-align: center;
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.skill-card {
+    background-color: #252525;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+}
+
+.skill-card i {
+    font-size: 3rem;
+    color: #00f2ff;
+}
+
+/* Contact Section */
+#contact {
+    padding: 60px;
+    background-color: #101010;
+    text-align: center;
+}
+
+#contact p {
+    font-size: 1.2rem;
+}
+
+.btn {
     background-color: #00f2ff;
-    width: 0;
-    animation: loadProgress 2s ease-out forwards;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff6b6b;
 }
 
 /* Footer */
 footer {
+    padding: 20px;
     text-align: center;
-    padding: 30px;
     background-color: #000;
-    color: #00f2ff;
 }
 
-/* Animations */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Scroll Animations */
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease;
 }
 
-@keyframes loadProgress {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
-/* Fade-in sections on scroll */
-.fade-in {
+section.animate {
     opacity: 1;
     transform: translateY(0);
 }
