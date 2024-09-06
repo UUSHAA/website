@@ -3,99 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Usman Shehryar - Resume</title>
+    <title>Portfolio - Muhammad Usman Shehryar</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <canvas id="particles"></canvas>
-    <header>
-        <h1 class="animated-header">Muhammad Usman Shehryar</h1>
-        <p class="animated-header">Freelance Graphic Designer & Frontend Web Developer</p>
-        <p class="animated-header">Rugby, England, United Kingdom</p>
-        <p class="animated-header">Email: <a href="mailto:usman.sa357@gmail.com">usman.sa357@gmail.com</a> | Phone: +44 7851 328425</p>
-        <p><a href="https://linkedin.com/in/muhammad-usman-shehryar-5479181a2" class="btn" target="_blank">LinkedIn Profile</a></p>
+    <!-- Header Section -->
+    <header id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <h1>Muhammad Usman Shehryar</h1>
+                    <p>Freelance Web Developer & Designer</p>
+                    <div class="experience">
+                        <div class="years">
+                            <h3>10+</h3>
+                            <p>Years of Experience</p>
+                        </div>
+                        <div class="skills-icons">
+                            <span>HTML</span>
+                            <span>JavaScript</span>
+                            <span>React</span>
+                        </div>
+                    </div>
+                    <a href="#projects" class="btn">See My Work</a>
+                </div>
+                <div class="hero-right">
+                    <img src="images/person-image.jpg" alt="Muhammad Usman">
+                </div>
+            </div>
+        </div>
     </header>
 
-    <!-- Theme Toggle Button -->
-    <div class="theme-toggle">
-        <button id="toggle-theme">Switch to Light Mode</button>
-    </div>
-
-    <nav id="navbar">
-        <ul>
-            <li><a href="#profile">Profile</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <section id="profile">
-        <h2>Profile</h2>
-        <p>
-            As a freelance graphic designer, I created functional and attractive websites for clients worldwide, using various design software and tools. 
-            I managed multiple projects, communicated effectively with clients, and met deadlines. I have a strong foundation in programming languages 
-            such as Java, Python, C++, and C#. I am eagerly seeking an organization that values innovation and fosters opportunities for personal and professional growth.
-        </p>
-    </section>
-
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="experience-grid">
-            <div class="experience-card">
-                <div class="card-front">
-                    <h3>Frontend Web Developer - Fiverr</h3>
-                    <p>Jun 2020 - Sep 2023</p>
-                </div>
-                <div class="card-back">
-                    <ul>
-                        <li>Worked on freelance web development projects while studying Computer Science.</li>
-                        <li>Managed projects, communicated with clients, and delivered customized websites.</li>
-                        <li>Developed responsive layouts, integrated interactive features, and optimized site performance.</li>
-                    </ul>
+    <!-- Latest Projects Section -->
+    <section id="projects">
+        <h2>Latest Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="images/project1.jpg" alt="Project 1">
+                <div class="project-info">
+                    <h3>Ecommerce Website</h3>
+                    <p>Modern ecommerce platform built using React and Node.js.</p>
                 </div>
             </div>
-
-            <div class="experience-card">
-                <div class="card-front">
-                    <h3>Freelance Graphic Designer</h3>
-                    <p>Jan 2020 - Jun 2022</p>
-                </div>
-                <div class="card-back">
-                    <ul>
-                        <li>Designed websites and graphics for global clients through online platforms.</li>
-                        <li>Managed multiple projects, communicated effectively, and delivered on time.</li>
-                        <li>Used various design software to bring client visions to life.</li>
-                    </ul>
+            <div class="project-card">
+                <img src="images/project2.jpg" alt="Project 2">
+                <div class="project-info">
+                    <h3>Portfolio Website</h3>
+                    <p>Personal portfolio showcasing web design and development skills.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills">
         <h2>Skills</h2>
-        <div class="skill">
-            <h3>JavaScript</h3>
-            <div class="progress-bar">
-                <div class="progress" style="width: 90%;"></div>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fab fa-js"></i>
+                <h3>JavaScript</h3>
             </div>
-        </div>
-        <div class="skill">
-            <h3>CSS</h3>
-            <div class="progress-bar">
-                <div class="progress" style="width: 85%;"></div>
+            <div class="skill-card">
+                <i class="fab fa-react"></i>
+                <h3>React</h3>
             </div>
-        </div>
-        <div class="skill">
-            <h3>React</h3>
-            <div class="progress-bar">
-                <div class="progress" style="width: 80%;"></div>
+            <div class="skill-card">
+                <i class="fab fa-html5"></i>
+                <h3>HTML5</h3>
             </div>
         </div>
     </section>
 
-    <footer id="contact">
-        <p>Contact me at: <a href="mailto:usman.sa357@gmail.com">usman.sa357@gmail.com</a> | Phone: +44 7851 328425</p>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to collaborate or have any questions, feel free to reach out!</p>
+        <a href="mailto:usman.sa357@gmail.com" class="btn">Email Me</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
         <p>&copy; 2024 Muhammad Usman Shehryar</p>
     </footer>
 
