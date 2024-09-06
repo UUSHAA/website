@@ -1,62 +1,42 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('section');
+// Scroll Animations (Using IntersectionObserver)
+const sections = document.querySelectorAll('section');
+const options = {
+    threshold: 0.3, // 30% of the section is visible before the animation triggers
+};
 
-    const fadeInOnScroll = () => {
-        sections.forEach(section => {
-            const rect = section.getBoundingClientRect();
-            if (rect.top < window.innerHeight - 100) {
-                section.classList.add('fade-in');
-            }
+const observer = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        }
+        entry.target.classList.add('animate');
+        observer.unobserve(entry.target); // Stop observing once it's animated
+    });
+}, options);
+
+sections.forEach(section => {
+    observer.observe(section);
+});
+
+// Smooth Scroll for Navigation
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
         });
-    };
+    });
+});
 
-    fadeInOnScroll();  // Run initially to fade in sections visible on load
-    window.addEventListener('scroll', fadeInOnScroll);
-
-    // Theme Toggle
-    const toggleButton = document.getElementById('toggle-theme');
-    let isDarkMode = true;
-
-    toggleButton.addEventListener('click', () => {
-        document.body.classList.toggle('light-theme');
-        isDarkMode = !isDarkMode;
-        toggleButton.textContent = isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+// Button Hover Animation
+const buttons = document.querySelectorAll('.btn');
+buttons.forEach(button => {
+    button.addEventListener('mouseover', () => {
+        button.style.transform = 'scale(1.1)';
     });
 
-    // Particles effect
-    const canvas = document.getElementById('particles');
-    const ctx = canvas.getContext('2d');
-
-    let particlesArray = [];
-    const numberOfParticles = 100;
-
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    class Particle {
-        constructor() {
-            this.x = Math.random() * canvas.width;
-            this.y = Math.random() * canvas.height;
-            this.size = Math.random() * 5 + 1;
-            this.speedX = Math.random() * 3 - 1.5;
-            this.speedY = Math.random() * 3 - 1.5;
-        }
-
-        update() {
-            this.x += this.speedX;
-            this.y += this.speedY;
-
-            if (this.size > 0.2) this.size -= 0.1;
-        }
-
-        draw() {
-            ctx.fillStyle = '#00f2ff';
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.closePath();
-            ctx.fill();
-        }
-    }
-
-    function init() {
-        for (let i = 0; i < numberOf
+    button.addEventListener('mouseleave', () => {
+        button.style.transform = 'scale(1)';
+    });
+});
