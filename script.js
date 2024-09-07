@@ -1,19 +1,18 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll("section");
-    
-    const options = {
-        threshold: 0.3
-    };
-    
-    const observer = new IntersectionObserver(function (entries, observer) {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            entry.target.classList.add("animate-fade-up");
-            observer.unobserve(entry.target);
-        });
-    }, options);
-    
+document.addEventListener('DOMContentLoaded', () => {
+    // Add a simple fade-in animation
+    const sections = document.querySelectorAll('section');
     sections.forEach(section => {
-        observer.observe(section);
+        section.style.opacity = 0;
+        section.style.transition = 'opacity 1s';
+    });
+    
+    window.addEventListener('scroll', () => {
+        sections.forEach(section => {
+            const sectionPos = section.getBoundingClientRect().top;
+            const screenPos = window.innerHeight / 1.5;
+            if (sectionPos < screenPos) {
+                section.style.opacity = 1;
+            }
+        });
     });
 });
