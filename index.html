@@ -3,87 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Muhammad Usman Shehryar - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="profile-header">
-                <div class="profile-pic">
-                    <img src="images/person-image.jpg" alt="Muhammad Usman Shehryar">
-                </div>
-                <div class="profile-info">
-                    <h1 class="animate-slide-in">Muhammad Usman Shehryar</h1>
-                    <h2 class="animate-slide-up">Frontend Developer & Graphic Designer</h2>
-                    <p class="animate-fade-in">Freelance Web Developer & Designer | Rugby, England</p>
-                    <div class="contact-info">
-                        <a href="https://linkedin.com/in/muhammad-usman-shehryar-5479181a2" class="btn animate-bounce">LinkedIn</a>
-                        <a href="mailto:usman.sa357@gmail.com" class="btn animate-bounce">Contact</a>
-                    </div>
-                </div>
+        <div class="profile-header">
+            <img src="profile.jpeg" alt="Muhammad Usman Shehryar" class="profile-pic">
+            <div class="header-text">
+                <h1>Hi, I'm Muhammad Usman Shehryar</h1>
+                <p>Freelance Web Developer | programmer</p>
             </div>
         </div>
     </header>
-
-    <section id="about" class="animate-fade-up">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I am a freelance programmer and frontend developer with a passion for building functional and attractive websites. With a degree in Computer Science and extensive experience in freelancing, I have worked with clients from various industries, delivering projects that meet their needs and surpass expectations.</p>
+    <section class="about">
+        <h2>About Me</h2>
+        <p>
+            I am a Computer Science graduate from The University of Huddersfield. With over three years of experience as a Freelance Web Developer and programmer, I have worked with diverse clients to deliver customized solutions. I have a passion for building responsive websites and creating functional designs that align with the client’s vision. My expertise includes JavaScript, CSS, and Office 365.
+        </p>
+    </section>
+    
+    <section class="education">
+        <h2>Education</h2>
+        <ul>
+            <li>
+                <h3>Bachelor's Degree, Computer Science</h3>
+                <p>The University of Huddersfield (2019 - 2022)</p>
+            </li>
+            <li>
+                <h3>A-Levels</h3>
+                <p>Beaconhouse (2016 - 2018)</p>
+            </li>
+        </ul>
+    </section>
+    
+    <section class="skills">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <span>Cascading Style Sheets (CSS)</span>
+            <span>JavaScript</span>
+            <span>Software Development Life Cycle (SDLC)</span>
+            <span>Office 365</span>
+            <span>Cloud Computing</span>
+            <span>Analytical Skills</span>
+            <span>Game Development</span>
         </div>
     </section>
 
-    <section id="skills" class="animate-fade-up">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card animate-scale-up">HTML5</div>
-                <div class="skill-card animate-scale-up">CSS3</div>
-                <div class="skill-card animate-scale-up">JavaScript</div>
-                <div class="skill-card animate-scale-up">Graphic Design</div>
-                <div class="skill-card animate-scale-up">Python</div>
-                <div class="skill-card animate-scale-up">Java</div>
-                <div class="skill-card animate-scale-up">C++</div>
-                <div class="skill-card animate-scale-up">C#</div>
+    <section class="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Fiverr Web Development</h3>
+                <p>Developed responsive websites for clients in diverse industries, optimizing site performance and user experience.</p>
             </div>
-        </div>
-    </section>
-
-    <section id="experience" class="animate-fade-up">
-        <div class="container">
-            <h2>Experience</h2>
-            <div class="experience-item">
-                <h3>Frontend Web Developer <span>- Fiverr</span></h3>
-                <p>Jun 2020 - Sep 2023</p>
-                <p>Developed websites for clients, creating responsive layouts, integrating interactive features, and optimizing performance.</p>
+            <div class="project-card">
+                <h3>Graphic Design Freelancing</h3>
+                <p>Provided custom graphic designs to clients globally, creating logos, banners, and other branding materials.</p>
             </div>
-            <div class="experience-item">
-                <h3>Freelance Graphic Designer <span>- Freelance</span></h3>
-                <p>Jan 2020 - Jun 2022</p>
-                <p>Created graphic designs for clients using various software, working closely with them to bring their visions to life.</p>
+            <div class="project-card">
+                <h3>WWF Deforestation Documentary</h3>
+                <p>Led a team to create an impactful documentary highlighting the causes and effects of deforestation for WWF.</p>
             </div>
-            <div class="experience-item">
-                <h3>IT Support Specialist <span>- Be Energy</span></h3>
-                <p>Jun 2018 - Sep 2018</p>
-                <p>Provided tech support, troubleshooting issues, and managing documentation processes.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="animate-fade-up">
-        <div class="container">
-            <h2>Get in Touch</h2>
-            <p>Feel free to reach out if you're interested in working together or just want to say hi!</p>
-            <a href="mailto:usman.sa357@gmail.com" class="btn animate-bounce">Email Me</a>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2023 Muhammad Usman Shehryar. All Rights Reserved.</p>
+        <div class="footer-content">
+            <p>Connect with me:</p>
+            <a href="https://www.linkedin.com/in/muhammad-usman-shehryar-5479181a2" target="_blank">LinkedIn</a>
+        </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
