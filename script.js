@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Add animations to sections when they come into view
     const sections = document.querySelectorAll("section");
     
     const options = {
@@ -9,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const observer = new IntersectionObserver(function (entries, observer) {
         entries.forEach(entry => {
             if (!entry.isIntersecting) return;
-            entry.target.classList.add("fade-in");
+            entry.target.classList.add("animate-fade-up");
             observer.unobserve(entry.target);
         });
     }, options);
